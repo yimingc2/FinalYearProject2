@@ -1,0 +1,52 @@
+<div class="container theme-showcase" role="main">
+	
+     <div class="jumbotron">
+        <h1>Assessing the Impact of B Corp on Public Sentiment of Companies through a Cloud-based Big Data Infrastructure</h1>
+        <p>This website shows comparison of sentiment of public before and after a list of companies being certified by B-corp.<br></br>Student name: Yiming Chen<br></br>Student number: 656180</p>
+      </div>
+
+      <div class="page-header">
+        <h1>Company</h1>
+      </div>
+
+<!-- This is used to show a list of all companies, orderred by capital of the name of the company -->
+<ul class="row col-sm-4 list-group mycss" ng-repeat="group in companies">
+  <div class="well">{{group[0]}}</div>
+<li class="list-group-item" ng-repeat="company in group[1] | orderBy:'name'">
+<a href="#/company/{{company.account}}">{{company.name}}</a>
+</li>
+</ul>
+
+<!-- This is used to show the total number of tweets retrieved after and before all companies being certified -->
+<div id="barChart1" style="height: 300px; width: 100%;"></div>
+<br></br>
+<br></br>
+<!-- This is used to show the sentiment analysis before companies joining B Corp -->
+<div id="bigPieChartBefore" style="height: 300px; width: 90%;"></div>
+<br></br>
+<br></br>
+<!-- This is used to show the sentiment analysis after companies joining B Corp -->
+<div id="bigPieChartAfter" style="height: 300px; width: 90%;"></div>
+<br></br>
+<br></br>
+<!-- The following column charts are used to show the total number of tweets retrieved of each company -->
+<div id="totalNumBar1" style="height: 300px; width: 130%;"></div>
+<br></br>
+<div id="totalNumBar2" style="height: 300px; width: 100%;"></div>
+<br></br>
+<div id="totalNumBar3" style="height: 300px; width: 100%;"></div>
+<br></br>
+<div id="totalNumBar4" style="height: 300px; width: 100%;"></div>
+<div class="myindex">
+<table class="mytable">
+    <tr ng-repeat="x in names">
+        <td>{{ x.name }}</td>
+    </tr>
+</table>
+</div>
+
+
+
+</div>
+
+

@@ -1,0 +1,20 @@
+.mycss {
+	float:left;
+	clear:left!important
+}
+
+.mytable {
+    font-size:10px;
+    fontFamily: Helvetica;
+    color:#695A42;
+}
+
+.myindex {
+	counter-reset:section;
+	margin-left:420px;
+}
+
+.mytable td::before {
+	counter-increment: section;
+	content: "#" counter(section) ": ";
+}
